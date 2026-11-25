@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blush Bunny | Fashion Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            BLUSH <span>BUNNY</span>
+        </div>
+
+        <nav>
+            <a href="#">MEN</a>
+            <a href="#">WOMEN</a>
+            <a href="#">KIDS</a>
+            <a href="#">BEAUTY</a>
+            <a href="#">STUDIO</a>
+        </nav>
+
+        <div class="search">
+            🔍
+            <input type="text" id="searchInput"
+                placeholder="Search for products, brands and more">
+        </div>
+
+        <div class="icons">
+            <div>♡<small>Profile</small></div>
+            <div>♡<small>Wishlist</small></div>
+            <div>🛍️<small>Bag <b id="cartCount">0</b></small></div>
+        </div>
+
+    </header>
+
+
+    <!-- OFFER BAR -->
+    <div class="offer">
+        🔥 BIG FASHION SALE &nbsp; | &nbsp;
+        UP TO 70% OFF &nbsp; | &nbsp;
+        FREE SHIPPING
+    </div>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-text">NEW SEASON COLLECTION</p>
+
+            <h1>
+                FASHION<br>
+                THAT FEELS <span>YOU</span>
+            </h1>
+
+            <p>
+                Discover trendy styles made for every mood.
+            </p>
+
+            <button onclick="shopNow()">
+                SHOP NOW →
+            </button>
+
+        </div>
+
+        <div class="hero-fashion">
+            👗
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="section">
+
+        <h2>SHOP BY CATEGORY</h2>
+
+        <div class="categories">
+
+            <div class="category">
+                <div class="category-img pink">👚</div>
+                <h3>Women</h3>
+            </div>
+
+            <div class="category">
+                <div class="category-img blue">👔</div>
+                <h3>Men</h3>
+            </div>
+
+            <div class="category">
+                <div class="category-img yellow">👟</div>
+                <h3>Shoes</h3>
+            </div>
+
+            <div class="category">
+                <div class="category-img purple">💄</div>
+                <h3>Beauty</h3>
+            </div>
+
+            <div class="category">
+                <div class="category-img green">👜</div>
+                <h3>Accessories</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="section products-section">
+
+        <div class="heading-row">
+            <div>
+                <h2>TRENDING NOW</h2>
+                <p>Fresh styles everyone is loving</p>
+            </div>
+
+            <button class="view-all">
+                VIEW ALL →
+            </button>
+        </div>
+
+
+        <div class="products" id="productContainer">
+
+            <!-- PRODUCT 1 -->
+            <div class="product-card" data-name="pink dress">
+
+                <div class="product-image product-pink">
+                    👗
+                    <span class="discount">30% OFF</span>
+                    <button class="wishlist">♡</button>
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Blush Pink Dress</h3>
+
+                    <p>Women • Casual Wear</p>
+
+                    <div class="price">
+                        ₹899
+                        <del>₹1,299</del>
+                    </div>
+
+                    <button class="bag-btn"
+                        onclick="addToBag()">
+                        ADD TO BAG
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+            <div class="product-card" data-name="white shirt">
+
+                <div class="product-image product-white">
+                    👔
+                    <span class="discount">40% OFF</span>
+                    <button class="wishlist">♡</button>
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Classic White Shirt</h3>
+
+                    <p>Men • Formal Wear</p>
+
+                    <div class="price">
+                        ₹799
+                        <del>₹1,399</del>
+                    </div>
+
+                    <button class="bag-btn"
+                        onclick="addToBag()">
+                        ADD TO BAG
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+            <div class="product-card" data-name="sneakers shoes">
+
+                <div class="product-image product-blue">
+                    👟
+                    <span class="discount">25% OFF</span>
+                    <button class="wishlist">♡</button>
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Urban Sneakers</h3>
+
+                    <p>Unisex • Casual Shoes</p>
+
+                    <div class="price">
+                        ₹1,499
+                        <del>₹1,999</del>
+                    </div>
+
+                    <button class="bag-btn"
+                        onclick="addToBag()">
+                        ADD TO BAG
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+            <div class="product-card" data-name="handbag bag">
+
+                <div class="product-image product-purple">
+                    👜
+                    <span class="discount">35% OFF</span>
+                    <button class="wishlist">♡</button>
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Elegant Handbag</h3>
+
+                    <p>Women • Accessories</p>
+
+                    <div class="price">
+                        ₹1,099
+                        <del>₹1,699</del>
+                    </div>
+
+                    <button class="bag-btn"
+                        onclick="addToBag()">
+                        ADD TO BAG
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SPECIAL OFFER -->
+    <section class="special">
+
+        <div>
+            <p>LIMITED TIME OFFER</p>
+
+            <h2>
+                GET EXTRA 20% OFF
+            </h2>
+
+            <p>
+                On your first order. Use code:
+                <b>BLUSH20</b>
+            </p>
+        </div>
+
+        <button onclick="shopNow()">
+            SHOP NOW
+        </button>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-column">
+
+            <h3>ONLINE SHOPPING</h3>
+
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">Beauty</a>
+            <a href="#">Gift Cards</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>CUSTOMER POLICIES</h3>
+
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>ABOUT BLUSH BUNNY</h3>
+
+            <p>
+                Your destination for trendy fashion,
+                everyday essentials and modern style.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>KEEP IN TOUCH</h3>
+
+            <div class="social">
+                Instagram &nbsp; Facebook &nbsp; Pinterest
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <div class="copyright">
+        © 2026 Blush Bunny Fashion Store | Made for College Project
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
